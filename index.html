@@ -45,23 +45,28 @@
             position: relative;
             width: 100%;
             height: 600px;
-            background: linear-gradient(to bottom, #e3f2fd 0%, #b3e5fc 100%);
+            background: #b3d9f2;
             border-radius: 10px;
             overflow: visible;
             border: 3px solid #5d4037;
         }
         
-        .map-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.7;
-            pointer-events: none;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDYwMCI+PHJlY3Qgd2lkdGg9IjEwMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjYjNkOWYyIi8+PHBhdGggZD0iTSA4MCwxODAgTCAxMDAsMTYwIEwgMTMwLDE0MCBMIDE2MCwxMzAgTCAyMDAsMTI1IEwgMjQwLDEzMCBMIDI4MCwxMzUgTCAzMjAsMTQwIEwgMzYwLDEzOCBMIDQwMCwxMzUgTCA0NDAsMTM4IEwgNDgwLDE0MCBMIDU2MCwxNDAgTCA2NDAsMTQ1IEwgNzIwLDE1MCBMIDM2MCwxNTUgTCA4MDAsMTY1IEwgODMwLDE4MCBMIDU1MCwyMDAgTCA4NjUsMjI1IEwgODc1LDI1NSBMIDG4MCwyODUgTCA4NzUsMzIwIEwgODY1LDM1MCBMIDU1MCwzODAgTCA4MzAsNDEwIEwgODAwLDQ0MCBMIDY2MCw0NjUgTCA3MjAsNDg1IEwgNjgwLDUwMCBMIDY0MCw1MTAgTCA2MDAsMTE1IEwgNTYwLDExOCBMIDUyMCw1MTUgTCA0ODAsNTA1IEwgNDQwLDQ5MCBMIDQ0MCw0NzAgTCAzNzAsNDQ1IEwgMzQ1LDQxNSBMIDMyNSwzODUgTCAzMTAsMjU1IEwgMjk1LDMyNSBMIDI4MCwyOTUgTCAyNjUsMjY1IEwgMjUwLDI0MCBMIDI1MCwyMjAgTCAyMTAsMjA1IEwgMTg1LDE5NSBMIDE2MCwxODggTCAxMzUsMTg1IEwgMTEwLDE4NSBMIDA5MCwxODggWiIgZmlsbD0iI2Q0ZTdkNCIgc3Ryb2tlPSIjN2E5ZDdhIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=');
-            background-size: cover;
-            background-position: center;
+        .land {
+            fill: #d4e7d4;
+            stroke: #7a9d7a;
+            stroke-width: 0.5;
+        }
+        
+        .water {
+            fill: #b3d9f2;
+        }
+        
+        .country-border {
+            fill: none;
+            stroke: #999;
+            stroke-width: 0.8;
+            stroke-dasharray: 2, 2;
+            opacity: 0.4;
         }
         
         svg {
@@ -168,7 +173,6 @@
         <p class="subtitle">Типовий освітній маршрут європейської аристократії XVII-XVIII ст.</p>
         
         <div class="map-container">
-            <div class="map-background"></div>
             <svg id="map-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
                 <!-- Маршрутні лінії -->
                 <path class="route-line" d="M 150,120 L 280,180" />
